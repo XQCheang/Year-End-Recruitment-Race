@@ -11,6 +11,7 @@ export interface Recruiter {
   name: string;
   avatar: string;
   applicants: Applicant[];
+  weeklyCount: number; // New field for manual weekly tracking
   company: string;
   isBot?: boolean;
 }
@@ -23,4 +24,9 @@ export interface MonthlyStat {
 export interface CampaignState {
   currentUser: Recruiter | null;
   allRecruiters: Recruiter[];
+}
+
+export interface CampaignConfig {
+  startDate: string; // YYYY-MM-DD
+  endDate: string;   // YYYY-MM-DD
 }
